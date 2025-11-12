@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:push_data_firestore/data/teams.dart';
 import 'package:push_data_firestore/data/users.dart';
-import 'package:push_data_firestore/data/transactions.dart';
 import 'package:push_data_firestore/styles/spacings.dart';
 import 'package:dto/dto.dart';
 
@@ -86,7 +84,7 @@ class _HomeState extends State<Home> {
 
     final users = await db.users.get();
     for (final user in users) {
-      await db.users.doc(user.id).delete();
+      await db.users(user.id).delete();
       setState(() {
         _description.insert(0, "Suppression de l'utilisateur ${user.id}");
       });

@@ -15,15 +15,15 @@ class CategoryUser {
     final db = FirestoreODM(appSchema, firestore: FirebaseFirestore.instance);
 
     User? user = FirebaseAuth.instance.currentUser;
-    List<Category> categoriesQuery = await db.users(user!.uid).categories.get();
+    //List<Category> categoriesQuery = await db.users(user!.uid).categories.get();
 
     List<CategoryInfo> categories = [];
 
-    for (Category cat in categoriesQuery) {
-      String id = cat.id;
-      String title = cat.title;
-      categories.add(CategoryInfo(id, title));
-    }
+    //for (Category cat in categoriesQuery) {
+    //  String id = cat.id;
+    //  String title = cat.title;
+    //  categories.add(CategoryInfo(id, title));
+    //}
 
     return categories;
   }

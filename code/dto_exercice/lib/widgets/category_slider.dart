@@ -11,6 +11,9 @@ class CategorySlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SnackBar(content: Text(''));
+    final db = FirestoreODM(appSchema, firestore: FirebaseFirestore.instance);
+
+    // Construire un StreamBuilder
+    return Text('StreamBuilder');
   }
 }

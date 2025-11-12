@@ -14,6 +14,7 @@ abstract class User with _$User {
     required String lastName,
     required String email,
 
+    // Exemple d'utilisation du converter timestamp
     @FirestoreTimestampConverter()
     required DateTime createdAt,
   }) = _User;

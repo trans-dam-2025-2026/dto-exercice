@@ -8,6 +8,8 @@ part 'schema.odm.dart';
 
 @Schema()
 @Collection<User>('users')
+//Définir la sous-collection categories son parent est users
+//Définir la sous-collection categories son parent est categories
 final appSchema = _$AppSchema;
 
 

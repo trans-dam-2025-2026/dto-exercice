@@ -146,9 +146,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
                     final name = _nameController.text;
                     final description = _descriptionController.text;
                     final price = _priceController.text;
+                    final myUserId = FirebaseAuth.instance.currentUser!.uid;
                     String? groupSelected = dropdownValue?.id;
-
-                    groupSelected == '' ? 'Non répertorié' : dropdownValue?.id;
                   }
                 },
               ),

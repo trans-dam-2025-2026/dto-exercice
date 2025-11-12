@@ -76,6 +76,8 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
 
                     final title = _nameController.text;
                     final description = _descriptionController.text;
+                    final myUserId = FirebaseAuth.instance.currentUser!.uid;
+
                   }
                 },
               ),
